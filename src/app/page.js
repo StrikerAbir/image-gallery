@@ -1,9 +1,11 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
+import MainComp from "./Components/MainComp";
 
 export default function Home() {
   return (
     <main className="">
-      Image Gallery
+      <MainComp></MainComp>
     </main>
-  )
+  );
 }
