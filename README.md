@@ -14,7 +14,7 @@
 ### `Live Link : `
 *** 
 
- TCourse : [https://image-gallery-ashen.vercel.app/](https://image-gallery-ashen.vercel.app/) 
+ Image Gallery : [https://image-gallery-ashen.vercel.app/](https://image-gallery-ashen.vercel.app/) 
 
 
 *** 
