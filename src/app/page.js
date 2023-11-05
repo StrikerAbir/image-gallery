@@ -4,7 +4,7 @@ import MainComp from "./Components/MainComp";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="max-w-[1440px] mx-auto my-20">
       <MainComp></MainComp>
     </main>
   );
