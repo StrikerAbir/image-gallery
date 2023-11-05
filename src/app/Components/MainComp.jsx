@@ -56,23 +56,23 @@ const MainComp = () => {
       <div>
         <div className="my-3">
           {selectedImages.length === 0 ? (
-            <h1 className="text-xl font-bold">Gallery</h1>
+            <h1 className="lg:text-xl text-sm font-bold">Gallery</h1>
           ) : (
             <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <input
                   type="checkbox"
-                  className="h-4 w-4"
+                  className="lg:h-4 lg:w-4"
                   checked={selectedImages.length && true}
                 />
-                <span className="ml-2 font-semibold">
+                <span className="ml-2 font-semibold lg:text-base text-sm">
                   {selectedImages.length} File Selected
                 </span>
               </div>
               <div
                 onClick={handleRemoveSelectedImages}
                 disabled={selectedImages.length === 0}
-                className="text-red-500 rounded cursor-pointer  font-semibold"
+                className="text-red-500 rounded cursor-pointer  font-semibold lg:text-base text-sm"
               >
                 {selectedImages.length === 1 ? "Delete file" : "Delete Files"}
               </div>
@@ -80,7 +80,7 @@ const MainComp = () => {
           )}
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-6 w-full">
+      <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 lg:gap-6 gap-2 w-full">
         {imageSet.map((img, index) => (
           <div
             key={index}
@@ -107,10 +107,10 @@ const MainComp = () => {
                     hover === index && "bg-[rgba(0,0,0,0.5)]"
                   }  transition duration-300 ease-in-out rounded-lg cursor-pointer z-10`}
                 >
-                  <div className="pl-4 pt-3">
+                  <div className="lg:pl-4 lg:pt-3 pl-1 ">
                     <input
                       type="checkbox"
-                      className="h-4 w-4"
+                      className="lg:h-4 lg:w-4"
                       checked={selectedImages.includes(index)}
                       onChange={() => handleImageSelect(index)}
                     />
@@ -122,8 +122,8 @@ const MainComp = () => {
             </div>
           </div>
         ))}
-        <div className="flex items-center justify-center border-dashed border-2 rounded">
-            Add Images
+        <div className="flex items-center justify-center border-dashed border-2 rounded lg:text-base text-xs text-center">
+          Add Images
         </div>
       </div>
     </>
